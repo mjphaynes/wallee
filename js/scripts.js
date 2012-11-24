@@ -20,6 +20,10 @@ $(function() {
 		function() {o(0);}
 	);
 	
+	$i.keypress(function() {
+		$form.css({opacity: 1});
+	});
+	
 	timeout = window.setTimeout(function() {
 		o(0);
 	}, 1000);
