@@ -14,7 +14,9 @@ if (strlen($q)) {
 		'q'    => $q,
 	);
 
-	echo file_get_contents('http://ajax.googleapis.com/ajax/services/search/images?'.http_build_query($params));
+	$r = json_decode(@file_get_contents('http://ajax.googleapis.com/ajax/services/search/images?'.http_build_query($params)));
+	
+	print_r($r);
 }
 
 ?>
