@@ -46,6 +46,7 @@ form label input {
 	border: 0;
 	width: 95%;
 	padding: 0;
+	outline: 0;
 	color: #232323;
 	font-size: 30px;
 	background: none;
