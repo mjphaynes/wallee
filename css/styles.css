@@ -35,16 +35,17 @@ form label {
 	left: 20px;
 	right: 20px;
 	bottom: 20px;
-	background: #fff;
 	position: absolute;
-	border-radius: 20px;
-	-moz-border-radius: 20px;
-	-webkit-border-radius: 20px;
+	border-radius: 23px;
+	-moz-border-radius: 23px;
+	-webkit-border-radius: 23px;
+	background: rgba(255, 255, 255, 0.75);
 }
 
 form label input {
 	border: 0;
 	padding: 0;
+	width: 80px;
 	color: #232323;
 	font-size: 24px;
 	background: none;
