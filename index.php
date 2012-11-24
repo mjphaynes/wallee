@@ -5,14 +5,17 @@
 
 $q = trim(preg_replace('/[a-z0-9-_\.\?]/i', '', strip_tags($_GET['q'])));
 
-$params = array(
-	'v'    => '1.0'
-	'rsz'  => '8',
-	'safe' => 'active',
-	'q'    => $q,
-);
+if (strlen($q)) {
+	$params = array(
+		'v'    => '1.0'
+		'rsz'  => '8',
+		'safe' => 'active',
+		'q'    => $q,
+	);
 
-echo file_get_contents('http://ajax.googleapis.com/ajax/services/search/images?'.http_build_query($params));
+	print_r($params);
+	// echo file_get_contents('http://ajax.googleapis.com/ajax/services/search/images?'.http_build_query($params));
+}
 
 ?>
 <!DOCTYPE html>
