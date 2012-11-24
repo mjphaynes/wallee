@@ -7,7 +7,7 @@ if (strlen($q)) {
 		'v'     => '1.0',
 		'rsz'   => '8',
 		'safe'  => 'off',
-		'imgsz' => 'large|xlarge|xxlarge|huge',
+		'imgsz' => 'xlarge|xxlarge|huge',
 		'q'     => $q,
 	);
 
