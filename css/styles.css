@@ -45,11 +45,12 @@ form label {
 form label input {
 	border: 0;
 	padding: 0;
-	width: 80%;
+	width: 90%;
 	color: #232323;
 	font-size: 30px;
 	background: none;
 	font-weight: bold;
+	margin: 15px 0 0 15px;
 	font-family: 'Archivo Narrow', sans-serif;
 	border: 1px solid red;
 }
