@@ -20,7 +20,7 @@
 		</div>
 
 		<form action="/" method="get">
-			<label><input type="text" name="q" value="" placeholder="Pug">
+			<label><input type="text" name="q" value="" placeholder="Pug"></label>
 		</form>
 
 

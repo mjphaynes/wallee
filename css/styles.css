@@ -22,7 +22,7 @@ form {
 	top: 40%;
 	left: 30%;
 	right: 30%;
-	height: 20%;
+	height: 15%;
 	position: fixed;
 	border-radius: 25px;
 	-moz-border-radius: 25px;
@@ -36,6 +36,7 @@ form label {
 	right: 15px;
 	bottom: 15px;
 	background: #fff;
+	position: absolute;
 	border-radius: 20px;
 	-moz-border-radius: 20px;
 	-webkit-border-radius: 20px;
