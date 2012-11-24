@@ -1,6 +1,6 @@
 <?php
 $url = '/images/pug.jpg';
-$q = trim(preg_replace('/[^a-z0-9-_\.\?]/i', '', strip_tags($_GET['q'])));
+$q = trim(preg_replace('/[^a-z0-9-_\.\? ]/i', '', strip_tags($_GET['q'])));
 
 if (strlen($q)) {
 	$params = array(
