@@ -9,16 +9,18 @@ $q = trim(preg_replace('/[^a-z0-9-_\.\?]/i', '', strip_tags($_GET['q'])));
 
 if (strlen($q)) {
 	$params = array(
-		'v'    => '1.0',
-		'rsz'  => '8',
-		'safe' => 'active',
-		'q'    => $q,
+		'v'     => '1.0',
+		'rsz'   => '8',
+		'safe'  => 'off',
+		'imgsz' => 'large|xlarge|xxlarge|huge'
+		'q'     => $q,
 	);
 
 	$r = json_decode(@file_get_contents('http://ajax.googleapis.com/ajax/services/search/images?'.http_build_query($params)));
 	$r = $r->responseData->results;
 	
 	if (count($r)) {
+		shuffle($r);
 		$url = $r[0]->unescapedUrl;
 	}
 }
