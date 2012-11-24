@@ -47,9 +47,9 @@ form label input {
 	padding: 0;
 	width: 80%;
 	color: #232323;
-	font-size: 24px;
+	font-size: 30px;
 	background: none;
 	font-weight: bold;
-	font-family: sans-serif;
+	font-family: 'Archivo Narrow', sans-serif;
 	border: 1px solid red;
 }

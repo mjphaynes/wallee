@@ -15,6 +15,8 @@
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
+		<link href='http://fonts.googleapis.com/css?family=Archivo+Narrow' rel='stylesheet' type='text/css'>
+
 		<div id="bg">
 			<img id="image" src="images/pug.jpg" alt="">
 		</div>
