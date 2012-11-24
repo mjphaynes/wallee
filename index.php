@@ -19,7 +19,9 @@
 			<img id="image" src="images/pug.jpg" alt="">
 		</div>
 
-
+		<form action="/" method="get">
+			<label><input type="text" name="q" value="" placeholder="Pug">
+		</form>
 
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>

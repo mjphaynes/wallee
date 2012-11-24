@@ -18,4 +18,19 @@
 	position: absolute; 
 }
 
+form {
+	top: 45%;
+	left: 30%;
+	right: 30%;
+	height: 10%;
+	position: fixed;
+	border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	background: rgba(0, 0, 0, 0.75);
+}
+
+form label {
+	
+}
 
