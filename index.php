@@ -1,9 +1,4 @@
 <?php
-error_reporting(E_ALL);
-
-// q.as_filetype = 'gif' if typeof animated is 'boolean' and animated is true
-// q.imgtype = 'face' if typeof faces is 'boolean' and faces is true
-
 $url = '/images/pug.jpg';
 $q = trim(preg_replace('/[^a-z0-9-_\.\?]/i', '', strip_tags($_GET['q'])));
 
@@ -12,7 +7,7 @@ if (strlen($q)) {
 		'v'     => '1.0',
 		'rsz'   => '8',
 		'safe'  => 'off',
-		'imgsz' => 'large|xlarge|xxlarge|huge'
+		'imgsz' => 'large|xlarge|xxlarge|huge',
 		'q'     => $q,
 	);
 
