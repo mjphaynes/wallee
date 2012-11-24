@@ -7,7 +7,7 @@ $q = trim(preg_replace('/[a-z0-9-_\.\?]/i', '', strip_tags($_GET['q'])));
 
 if (strlen($q)) {
 	$params = array(
-		'v'    => '1.0'
+		'v'    => '1.0',
 		'rsz'  => '8',
 		'safe' => 'active',
 		'q'    => $q,
