@@ -4,6 +4,7 @@ error_reporting(E_ALL);
 // q.as_filetype = 'gif' if typeof animated is 'boolean' and animated is true
 // q.imgtype = 'face' if typeof faces is 'boolean' and faces is true
 
+$url = '/images/pug.jpg';
 $q = trim(preg_replace('/[^a-z0-9-_\.\?]/i', '', strip_tags($_GET['q'])));
 
 if (strlen($q)) {
@@ -15,8 +16,11 @@ if (strlen($q)) {
 	);
 
 	$r = json_decode(@file_get_contents('http://ajax.googleapis.com/ajax/services/search/images?'.http_build_query($params)));
+	$r = $r->responseData->results;
 	
-	print_r($r);
+	if (count($r)) {
+		$url = $r[0]->unescapedUrl;
+	}
 }
 
 ?>
@@ -40,7 +44,7 @@ if (strlen($q)) {
 		<link href="http://fonts.googleapis.com/css?family=Archivo+Narrow" rel="stylesheet" type="text/css">
 
 		<div id="bg">
-			<img id="image" src="/images/pug.jpg" alt="">
+			<img id="image" src="<?php echo $url;?>" alt="">
 		</div>
 
 		<form action="/" method="get">
