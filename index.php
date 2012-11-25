@@ -1,25 +1,23 @@
 <?php
-$url = '/images/pug.jpg';
-$q = trim(preg_replace('/[^a-z0-9-_\.\? ]/i', '', strip_tags($_GET['q'])));
-
-if (strlen($q)) {
-	$params = array(
-		'v'     => '1.0',
-		'rsz'   => '8',
-		'safe'  => 'off',
-		'imgsz' => 'xlarge|xxlarge|huge',
-		'q'     => $q,
-	);
-
-	$r = json_decode(@file_get_contents('http://ajax.googleapis.com/ajax/services/search/images?'.http_build_query($params)));
-	$r = $r->responseData->results;
-	
-	if (count($r)) {
-		shuffle($r);
-		$url = $r[0]->unescapedUrl;
-	}
+if (!strlen($q = trim(preg_replace('/[^a-z0-9-_\.\? ]/i', '', strip_tags($_GET['q']))))) {
+	$q = 'pug';
 }
 
+$params = array(
+	'v'     => '1.0',
+	'rsz'   => '8',
+	'safe'  => 'off',
+	'imgsz' => 'xlarge|xxlarge|huge',
+	'q'     => $q,
+);
+
+$r = json_decode(@file_get_contents('http://ajax.googleapis.com/ajax/services/search/images?'.http_build_query($params)));
+$r = $r->responseData->results;
+
+if (count($r)) {
+	shuffle($r);
+	$url = $r[0]->unescapedUrl;
+}
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -45,7 +43,7 @@ if (strlen($q)) {
 		</div>
 
 		<form action="/" method="get">
-			<label><input type="text" name="q" value="<?php echo $q;?>" placeholder="Pug"></label>
+			<label><input type="text" name="q" value="<?php echo $q;?>" placeholder="<?php echo $q;?>"></label>
 		</form>
 
 
