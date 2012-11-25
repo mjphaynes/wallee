@@ -20,7 +20,7 @@ $(function() {
 		function() {o(0);}
 	);
 	
-	$i.keypress(function() {
+	$i.bind('keypress keydown keyup', function() {
 		$form.css({opacity: 1});
 	});
 	
